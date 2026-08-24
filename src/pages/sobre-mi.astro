@@ -1,0 +1,105 @@
+---
+// Colocar en: src/pages/sobre-mi.astro
+// Si el starter trae src/pages/about.astro, bórralo y usa este.
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead
+      title={`Sobre mí · ${SITE_TITLE}`}
+      description="Trayectoria de José Ángel González Mejías: arquitectura de software, gobierno del dato y dirección de equipos de ingeniería."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Sobre mí</h1>
+
+      <p>
+        Soy José Ángel González Mejías. Dirijo la arquitectura y el desarrollo de
+        Anjana Data, una plataforma de Data Governance que usan decenas de
+        organizaciones para gobernar sus activos de datos.
+      </p>
+
+      <p>
+        Llevo un equipo de trece personas entre desarrollo, arquitectura y QA, del que
+        he incorporado a siete. Lo más relevante de estos años ha sido convertir un
+        producto que publicaba una release cada uno o dos años en uno que entrega dos al
+        año, sosteniendo un 99,9% de disponibilidad. Fue un cambio de arquitectura, de
+        proceso y de cultura de equipo a la vez, y ninguna de las tres partes funcionaba
+        sin las otras dos.
+      </p>
+
+      <p>
+        Antes de esto estuve en el lado del dato: Big Data en Pragsis Bidoop, Data
+        Warehouse para RCI Banque en Worldline y automatización de plataformas en el
+        centro de proceso de datos del Grupo Santander. Esa trayectoria explica bastante
+        de cómo trabajo: llegué al gobierno del dato después de haberlo movido, roto y
+        reconstruido unas cuantas veces.
+      </p>
+
+      <h2>Cómo trabajo</h2>
+
+      <p>
+        Trabajo mejor donde la decisión técnica y la de negocio son la misma decisión.
+        Una arquitectura no es buena o mala en abstracto: lo es respecto a qué mercado
+        quieres abrir, qué riesgo puedes asumir y qué equipo tienes para sostenerla. Casi
+        todo lo que escribo aquí sale de ahí.
+      </p>
+
+      <p>
+        Estudié Ingeniería Informática en la Universidad de Cantabria, con mención en
+        Computación, y soy Experto en Big Data por Pragsis Bidoop University.
+      </p>
+
+      <h2>Fuera del trabajo</h2>
+
+      <p>
+        Cántabro, con una etapa larga en Madrid y ahora afincado en Bilbao, aprendiendo
+        euskera con más terquedad que talento. Pasé más de diez años como animador y
+        educador juvenil, que sigue siendo el mejor entrenamiento en liderazgo que he
+        tenido. Y del Racing de Santander, con lo que eso implica.
+      </p>
+
+      <h2>Contacto</h2>
+
+      <p>
+        <a href="mailto:joseangonzalezm@gmail.com">joseangonzalezm@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/joseangelgonzalezmejias/">LinkedIn</a> ·
+        <a href="https://github.com/jopse">GitHub</a>
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  h1 {
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    line-height: 1.2;
+    margin: 0 0 2rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.75rem 0 0.9rem;
+  }
+
+  p {
+    font-size: 1.03rem;
+    line-height: 1.7;
+    color: #33383f;
+    margin: 0 0 1.15rem;
+  }
+</style>
