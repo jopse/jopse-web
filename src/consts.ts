@@ -2,4 +2,4 @@
 
 export const SITE_TITLE = 'José Ángel González Mejías';
 export const SITE_DESCRIPTION =
-  'Dirijo arquitectura y desarrollo de una plataforma de Data Governance. Escribo sobre arquitectura, gobierno del dato y equipos de ingeniería.';
+  'Dirijo arquitectura y desarrollo de una plataforma de Data Governance. Escribo sobre liderazgo, decisiones de arquitectura, novedades tecnológicas y mi paso de junior a CTO office a través de una startup.';
