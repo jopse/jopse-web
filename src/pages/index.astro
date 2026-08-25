@@ -40,6 +40,25 @@ const posts = (await getCollection('blog'))
           <a href="https://github.com/jopse">GitHub</a>
           <a href="https://x.com/jopse5">X</a>
         </p>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>8 años</dt>
+            <dd>liderando</dd>
+          </div>
+          <div class="stat">
+            <dt>7 personas</dt>
+            <dd>incorporadas</dd>
+          </div>
+          <div class="stat">
+            <dt>2 releases</dt>
+            <dd>al año</dd>
+          </div>
+          <div class="stat">
+            <dt>99,9%</dt>
+            <dd>disponibilidad</dd>
+          </div>
+        </dl>
       </section>
 
       <section class="writing">
@@ -106,6 +125,30 @@ const posts = (await getCollection('blog'))
     flex-wrap: wrap;
     gap: 1.5rem;
     font-size: 0.95rem;
+  }
+
+  .stats {
+    margin: 2.5rem 0 0;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .stat dt {
+    font-size: 1.4rem;
+    font-weight: 650;
+    color: var(--accent);
+  }
+
+  .stat dd {
+    margin: 0.2rem 0 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7280;
   }
 
   .writing {
