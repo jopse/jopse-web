@@ -1,63 +1,40 @@
-# Astro Starter Kit: Blog
+# jopse.es
 
-```sh
-npm create astro@latest -- --template blog
-```
+Site personal de José Ángel González Mejías: arquitectura de software, gobierno del dato, equipos de ingeniería y lo que dé para escribir. Construido con [Astro](https://astro.build) y desplegado en Cloudflare.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Stack
 
-Features:
+- [Astro](https://astro.build) 7 + [MDX](https://docs.astro.build/en/guides/integrations-guide/mdx/) para las entradas del blog
+- Sitemap y RSS generados automáticamente ([`@astrojs/sitemap`](https://docs.astro.build/en/guides/integrations-guide/sitemap/), [`@astrojs/rss`](https://docs.astro.build/en/guides/rss/))
+- Tipografía Atkinson servida localmente vía `astro:assets`
+- Despliegue en [Cloudflare](https://developers.cloudflare.com/workers/) mediante `wrangler` (config en `wrangler.jsonc`)
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura
 
 ```text
 ├── public/
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
+│   ├── assets/        # imágenes y fuentes locales
+│   ├── components/    # Header, Footer, BaseHead...
+│   ├── content/blog/  # entradas del blog en Markdown/MDX
+│   ├── layouts/        # BlogPost.astro
+│   └── pages/          # index, sobre-mi, blog/...
 ├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+├── wrangler.jsonc
+└── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Comandos
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Todos se ejecutan desde la raíz del proyecto:
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+| Comando           | Acción                                              |
+| :----------------- | :--------------------------------------------------- |
+| `npm install`       | Instala dependencias                                  |
+| `npm run dev`       | Arranca el servidor de desarrollo en `localhost:4321` |
+| `npm run build`     | Genera el sitio de producción en `./dist/`            |
+| `npm run preview`   | Previsualiza el build localmente antes de desplegar   |
+| `npm run deploy`    | Publica `./dist/` en Cloudflare vía `wrangler deploy` |
+| `npm run astro ...` | Ejecuta comandos de la CLI de Astro (`astro check`...) |
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Requiere Node >= 22.12.0.
