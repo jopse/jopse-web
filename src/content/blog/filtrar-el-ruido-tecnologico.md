@@ -24,11 +24,15 @@ Adoptar algo en una plataforma en producción no es probarlo. Es heredarlo: sopo
 > 3. ¿Qué señal mínima necesito ver (dato, caso de uso, cliente) antes de comprometer roadmap?
 > 4. ¿Quién en el equipo lo sostiene dentro de seis meses, cuando ya no sea novedad?
 
-## Caso real: agentes de IA como consumidores del catálogo
+## El MCP que siguió sin mí
 
-Enlaza con ["El catálogo de datos dejó de ser un inventario"](/blog/el-catalogo-de-datos-dejo-de-ser-un-inventario/): cómo se aplicó (o se debería haber aplicado) el filtro anterior a la decisión de exponer el catálogo a agentes vía MCP.
+Enlaza con ["El catálogo de datos dejó de ser un inventario"](/blog/el-catalogo-de-datos-dejo-de-ser-un-inventario/): esta es la decisión real detrás de exponer el catálogo a agentes vía MCP.
 
-> ✍️ Aterriza esto con tu propia decisión: ¿qué preguntaste antes de comprometerte? ¿qué te hizo decir que sí (o esperar)?
+Antes de mi permiso de paternidad, arrancamos el desarrollo de un MCP para exponer el catálogo a agentes de IA, con la idea de tener una beta con la que salir a vender. No lo construí yo: decidí que se hiciera y en qué dirección, y el equipo se hizo cargo del resto.
+
+Se aceptó tan bien internamente que el desarrollo siguió sin mí mientras estaba de baja, y acabó convirtiéndose en una palanca de venta importante.
+
+> ✍️ Aterriza esto con el filtro de arriba: de los 4 criterios, ¿cuáles aplicaste realmente antes de comprometerte? ¿hubo alguno que te faltó y notaste después?
 
 ## Qué adopté y qué descarté
 
