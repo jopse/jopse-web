@@ -3,7 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import RidgeDivider from '../components/RidgeDivider.astro';
+import ContourDivider from '../components/ContourDivider.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 
@@ -21,7 +21,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     <Header />
     <main>
       <section class="intro">
-        <p class="eyebrow">Arquitectura · Gobierno del dato · Equipos</p>
+        <p class="eyebrow">
+          <svg class="waypoint" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="3" class="waypoint-center" />
+          </svg>
+          Arquitectura · Gobierno del dato · Equipos
+        </p>
         <h1>
           Dirijo la arquitectura y el desarrollo de una plataforma de <em>Data Governance</em> que usan decenas de organizaciones.
         </h1>
@@ -62,7 +68,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         </dl>
       </section>
 
-      <RidgeDivider class="section-ridge" />
+      <ContourDivider class="section-ridge" />
 
       <section class="writing">
         <h2>Escribo sobre</h2>
@@ -94,23 +100,33 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   }
 
   .eyebrow {
+    display: flex;
+    align-items: center;
     font-family: var(--font-archivo), ui-monospace, monospace;
     font-weight: 600;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgb(var(--gray));
+    color: var(--accent-dark);
     margin: 0 0 1.25rem;
   }
 
-  .eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 3px;
-    margin-right: 0.5em;
-    background: var(--rust);
-    vertical-align: middle;
+  .waypoint {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.6em;
+    flex-shrink: 0;
+  }
+
+  .waypoint circle {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+  }
+
+  .waypoint .waypoint-center {
+    fill: var(--rust);
+    stroke: none;
   }
 
   h1 {

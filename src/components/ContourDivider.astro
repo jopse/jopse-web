@@ -1,0 +1,47 @@
+---
+interface Props {
+	class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<svg
+	class:list={['contour-divider', className]}
+	viewBox="0 0 400 80"
+	preserveAspectRatio="none"
+	aria-hidden="true"
+	focusable="false"
+>
+	<defs>
+		<path id="contour-line" d="M0 44 L60 44 L95 8 L130 28 L165 2 L200 32 L240 12 L280 44 L400 44" />
+	</defs>
+	<use href="#contour-line" y="24" class="line line-3" />
+	<use href="#contour-line" y="12" class="line line-2" />
+	<use href="#contour-line" class="line line-1" />
+	<circle cx="165" cy="2" r="4" class="summit" />
+</svg>
+<style>
+	.contour-divider {
+		display: block;
+		width: 100%;
+		height: 72px;
+	}
+	.contour-divider .line {
+		fill: none;
+		stroke: var(--accent);
+		stroke-width: 2.5;
+		vector-effect: non-scaling-stroke;
+	}
+	.contour-divider .line-1 {
+		opacity: 0.9;
+	}
+	.contour-divider .line-2 {
+		opacity: 0.5;
+	}
+	.contour-divider .line-3 {
+		opacity: 0.25;
+	}
+	.contour-divider .summit {
+		fill: var(--rust);
+	}
+</style>
