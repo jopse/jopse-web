@@ -3,6 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import RidgeDivider from '../components/RidgeDivider.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 
@@ -61,6 +62,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         </dl>
       </section>
 
+      <RidgeDivider class="section-ridge" />
+
       <section class="writing">
         <h2>Escribo sobre</h2>
         <ul class="posts">
@@ -91,32 +94,42 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   }
 
   .eyebrow {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-archivo), ui-monospace, monospace;
+    font-weight: 600;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #6b7280;
+    color: rgb(var(--gray));
     margin: 0 0 1.25rem;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    margin-right: 0.5em;
+    background: var(--rust);
+    vertical-align: middle;
   }
 
   h1 {
     font-size: clamp(1.7rem, 4.2vw, 2.6rem);
     line-height: 1.2;
-    font-weight: 650;
     margin: 0 0 1.75rem;
     text-wrap: balance;
   }
 
   h1 em {
     font-style: italic;
-    color: #2f5d50;
+    color: var(--accent);
   }
 
   .lede {
     font-size: 1.05rem;
     line-height: 1.65;
     margin: 0 0 1.1rem;
-    color: #33383f;
+    color: rgb(var(--gray-dark));
   }
 
   .links {
@@ -130,7 +143,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .stats {
     margin: 2.5rem 0 0;
     padding-top: 2rem;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid rgb(var(--gray-light));
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.5rem;
@@ -144,26 +157,29 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
   .stat dd {
     margin: 0.2rem 0 0;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-archivo), ui-monospace, monospace;
+    font-weight: 600;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #6b7280;
+    color: rgb(var(--gray));
+  }
+
+  .section-ridge {
+    margin-top: 4.5rem;
   }
 
   .writing {
-    margin-top: 4.5rem;
-    border-top: 1px solid #e5e7eb;
     padding-top: 2.5rem;
   }
 
   .writing h2 {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-archivo), ui-monospace, monospace;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #6b7280;
-    font-weight: 500;
+    color: rgb(var(--gray));
+    font-weight: 600;
     margin: 0 0 1.5rem;
   }
 
@@ -192,14 +208,14 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   }
 
   .posts a:hover .post-title {
-    color: #2f5d50;
+    color: var(--accent);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
 
   .post-desc {
     display: block;
-    color: #5b6169;
+    color: rgb(var(--gray));
     font-size: 0.95rem;
     line-height: 1.55;
   }
