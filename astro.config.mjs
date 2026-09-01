@@ -31,5 +31,14 @@ export default defineConfig({
 				],
 			},
 		},
+		{
+			provider: fontProviders.google(),
+			name: 'Archivo',
+			cssVariable: '--font-archivo',
+			fallbacks: ['sans-serif'],
+			weights: [500, 600, 700],
+			styles: ['normal'],
+			subsets: ['latin'],
+		},
 	],
 });
