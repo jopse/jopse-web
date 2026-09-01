@@ -1,10 +1,10 @@
 ---
-import RidgeDivider from './RidgeDivider.astro';
+import ContourDivider from './ContourDivider.astro';
 const today = new Date();
 ---
 
 <footer>
-	<RidgeDivider class="footer-ridge" />
+	<ContourDivider class="footer-ridge" />
 	&copy; {today.getFullYear()} José Ángel González Mejías
 	<div class="social-links">
 		<a href="https://www.linkedin.com/in/joseangelgonzalezmejias/" target="_blank" rel="noopener noreferrer">
@@ -35,7 +35,7 @@ const today = new Date();
 		text-align: center;
 	}
 	.footer-ridge {
-		margin-bottom: 2em;
+		margin-bottom: 1.25em;
 	}
 	.social-links {
 		display: flex;

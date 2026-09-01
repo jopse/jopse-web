@@ -1,11 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-    <path class="ridge" d="M14 104 L34 56 L46 74 L64 26 L82 70 L94 50 L114 104" />
-    <circle class="summit" cx="64" cy="26" r="6" />
+    <path class="ring ring-1" d="M24 100 A40 40 0 0 1 104 100" />
+    <path class="ring ring-2" d="M34 100 A30 30 0 0 1 94 100" />
+    <path class="ring ring-3" d="M44 100 A20 20 0 0 1 84 100" />
+    <circle class="summit" cx="64" cy="80" r="7" />
     <style>
-        .ridge { fill: none; stroke: #1a1f1b; stroke-width: 8; stroke-linejoin: round; stroke-linecap: round; }
-        .summit { fill: #b6501f; }
+        .ring { fill: none; stroke: #0c7a3e; stroke-width: 7; stroke-linecap: round; }
+        .ring-1 { opacity: 0.55; }
+        .ring-2 { opacity: 0.8; }
+        .summit { fill: #d45b22; }
         @media (prefers-color-scheme: dark) {
-            .ridge { stroke: #eff1ea; }
+            .ring { stroke: #f5f6f0; }
+            .ring-1 { opacity: 0.4; }
+            .ring-2 { opacity: 0.65; }
         }
     </style>
 </svg>
